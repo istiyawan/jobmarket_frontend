@@ -1,28 +1,56 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app class="grey--text text--darken2" id="defaultFont">
+    <v-main>
+        <NavA  v-if="settokens == null" />
+        <NavB  v-else />
+      <router-view />
+    </v-main>
+    <v-footer class="footer">
+      <v-container>
+        <v-spacer></v-spacer>
+        <div class="mr-16">Jobmarket &copy;{{ new Date().getFullYear() }}</div>
+      </v-container>
+    </v-footer>
+    <Loader :visible="loading" />
+  </v-app>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { mapGetters, mapState } from "vuex";
+import NavA from "@/components/Navbar.vue";
+import NavB from '@/components/nimda/Nav.vue'
+import Loader from "@/components/loader.vue";
+import Vue from "vue";
+import moment from "moment";
 export default {
-  name: 'App',
+  data: () => ({
+    drawer: true,
+  }),
+  state: {},
   components: {
-    HelloWorld
-  }
-}
+    NavA,
+    Loader,
+    NavB,
+  },
+  mounted(){
+    this.settokens
+  },
+  // mounted() {
+  //   this.token = localStorage.getItem("token");
+  //   this.Admin = this.$store.state.admins;
+  // },
+  computed: {
+    ...mapState("loader", ["loading"]),
+    ...mapGetters("Auth",["settokens"]),
+  },
+};
+Vue.filter('formatDate', function(value){
+    if(value){
+        return moment(String(value)).format('YYYY-MM-DD')
+    }
+})
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.footer{
+    color:#FFFFFF;
 }
 </style>
