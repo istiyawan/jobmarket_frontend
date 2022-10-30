@@ -106,7 +106,8 @@ const routes = [
     component: Corporate,
     beforeEnter: (to, from, next) => {
       // fungsi routing vue auth guard otentikasi
-      if (localStorage.getItem("token") !== null) {
+      // if (localStorage.getItem("token") !== null) {
+      if (localStorage.getItem("token") == null) {
         // jika token kosong (*tambahan, dan username admin role = 'wilayah')
         next();
       } else {
@@ -121,7 +122,8 @@ const routes = [
     component: Pelamar,
     beforeEnter: (to, from, next) => {
       // fungsi routing vue auth guard otentikasi
-      if (localStorage.getItem("token") !== null) {
+      // if (localStorage.getItem("token") !== null) {
+      if (localStorage.getItem("token") == null) {
         // jika token kosong (*tambahan, dan username admin role = 'wilayah')
         next();
       } else {
@@ -135,7 +137,8 @@ const routes = [
     name: 'kategori',
     component: KategoriPekerjaan,
     beforeEnter: (to, from, next) => {
-      if (localStorage.getItem('token') !== null) {
+      // if (localStorage.getItem('token') !== null) {
+      if (localStorage.getItem('token') == null) {
         next()
       } else {
         alert('akses ditolak')
