@@ -34,10 +34,6 @@ export default {
   mounted(){
     this.settokens
   },
-  // mounted() {
-  //   this.token = localStorage.getItem("token");
-  //   this.Admin = this.$store.state.admins;
-  // },
   computed: {
     ...mapState("loader", ["loading"]),
     ...mapGetters("Auth",["settokens"]),
