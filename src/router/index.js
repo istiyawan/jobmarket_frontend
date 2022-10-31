@@ -12,11 +12,7 @@ import Company from "../views/Company.vue";
 import RegisterCompany from "../views/RegisterCompany.vue";
 import LoginCompany from "../views/LoginCompany.vue";
 import Logout from "../views/Logout.vue";
-import Auth from "../views/nimda/Auth.vue";
 import ActivationAccount from "../views/ActivationAccount";
-import Corporate from "../views/nimda/Corporate.vue";
-import Pelamar from "../views/nimda/Pelamar.vue";
-import KategoriPekerjaan from "../views/nimda/Kategori.vue";
 import Application from "../views/Application.vue";
 import SuccessApply from "../views/SuccessApply.vue"
 import Interview from "../views/Interview.vue";
@@ -88,63 +84,16 @@ const routes = [
     name: "LoginCompany",
     component: LoginCompany
   },
-  { path: "/logout", name: "Logout", component: Logout },
-  {
-    path: "/nimda/auth",
-    name: "auth",
-    component: Auth
+  { 
+    path: "/logout", 
+    name: "Logout", 
+    component: Logout 
   },
   {
     path: "/activationAccount/:activationCode",
     name: "ActivationAccount",
     component: ActivationAccount
 
-  },
-  {
-    path: "/nimda/corporate",
-    name: "corporate",
-    component: Corporate,
-    beforeEnter: (to, from, next) => {
-      // fungsi routing vue auth guard otentikasi
-      // if (localStorage.getItem("token") !== null) {
-      if (localStorage.getItem("token") == null) {
-        // jika token kosong (*tambahan, dan username admin role = 'wilayah')
-        next();
-      } else {
-        alert("akses ditolak");
-        next("/nimda/auth");
-      }
-    }
-  },
-  {
-    path: "/nimda/pelamar",
-    name: "pelamar",
-    component: Pelamar,
-    beforeEnter: (to, from, next) => {
-      // fungsi routing vue auth guard otentikasi
-      // if (localStorage.getItem("token") !== null) {
-      if (localStorage.getItem("token") == null) {
-        // jika token kosong (*tambahan, dan username admin role = 'wilayah')
-        next();
-      } else {
-        alert("akses ditolak");
-        next("/nimda/auth");
-      }
-    }
-  },
-  {
-    path: '/nimda/kategori-pekerjaan',
-    name: 'kategori',
-    component: KategoriPekerjaan,
-    beforeEnter: (to, from, next) => {
-      // if (localStorage.getItem('token') !== null) {
-      if (localStorage.getItem('token') == null) {
-        next()
-      } else {
-        alert('akses ditolak')
-        next('/sign-in')
-      }
-    }
   },
   {
         path:"/application",

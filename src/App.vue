@@ -7,6 +7,7 @@
     </v-main>
     <v-footer class="footer">
       <v-container>
+        {{"kura"+logingin}}
         <v-spacer></v-spacer>
         <div class="mr-16">Jobmarket &copy;{{ new Date().getFullYear() }}</div>
       </v-container>
@@ -24,6 +25,7 @@ import moment from "moment";
 export default {
   data: () => ({
     drawer: true,
+    logingin: this.store.state.token,
   }),
   state: {},
   components: {
