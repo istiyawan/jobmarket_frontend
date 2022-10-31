@@ -7,7 +7,7 @@ import httpClient from "@/utils/httpClient";
 import Auth from "./modules/nimda/Auth";
 import Pelamar from "./modules/nimda/Pelamar";
 import Kategori from "./modules/nimda/Kategori_pekerjaan";
-// import createPersistedState from "vuex-persistedstate";
+import createPersistedState from "vuex-persistedstate";
 import StoreCompany from "./StoreCompany"
 
 Vue.use(Vuex);
@@ -24,7 +24,7 @@ axios.defaults.baseURL = "http://localhost:8081";
 
 export const store = new Vuex.Store({
   plugins: [
-    // createPersistedState(),
+    createPersistedState(),
   ],
   state: {
     token: "",
