@@ -13,13 +13,13 @@ import StoreCompany from "./StoreCompany"
 Vue.use(Vuex);
 
 
-httpClient.defaults.baseURL = "http://localhost:8081";
-const API_URL = "http://localhost:8081";
-axios.defaults.baseURL = "http://localhost:8081";
+// httpClient.defaults.baseURL = "http://localhost:8081";
+// const API_URL = "http://localhost:8081";
+// axios.defaults.baseURL = "http://localhost:8081";
 
-// httpClient.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
-// const API_URL = "http://jobmarketbackend.herokuapp.com";
-// axios.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
+httpClient.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
+const API_URL = "http://jobmarketbackend.herokuapp.com";
+axios.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
 
 
 export const store = new Vuex.Store({
