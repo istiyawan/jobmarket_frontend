@@ -96,20 +96,20 @@ const routes = [
 
   },
   {
-        path:"/application",
-        name: "Application",
-        component: Application,
+    path:"/application",
+    name: "Application",
+    component: Application,
 
   },
   {
-        path:"/successApply",
-        name: "SuccessApply",
-        component: SuccessApply,
+    path:"/successApply",
+    name: "SuccessApply",
+    component: SuccessApply,
   },
   {
-      path:"/interview",
-      name:"Interview",
-      component: Interview,
+    path:"/interview",
+    name:"Interview",
+    component: Interview,
   },
 ];
 const router = new VueRouter({
