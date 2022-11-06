@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Vuex from "vuex";
+import { createStore }from "vuex";
 import axios from "axios";
 import { mapState } from "vuex";
 import loader from "./modules/loader";
@@ -22,7 +22,7 @@ const API_URL = "http://jobmarketbackend.herokuapp.com";
 axios.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
 
 
-export const store = new Vuex.Store({
+export const store = createStore({
   plugins: [
     createPersistedState(),
   ],
