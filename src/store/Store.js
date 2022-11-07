@@ -17,10 +17,13 @@ Vue.use(Vuex);
 // const API_URL = "http://localhost:8081";
 // axios.defaults.baseURL = "http://localhost:8081";
 
-httpClient.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
-const API_URL = "http://jobmarketbackend.herokuapp.com";
-axios.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
+// httpClient.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
+// const API_URL = "http://jobmarketbackend.herokuapp.com";
+// axios.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
 
+httpClient.defaults.baseURL= "https://jobmarketbackend.up.railway.app/";
+const API_URL = "https://jobmarketbackend.up.railway.app/";
+axios.defaults.baseURL = "https://jobmarketbackend.up.railway.app/";
 
 export const store = new Vuex.Store({
   plugins: [
