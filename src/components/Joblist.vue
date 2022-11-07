@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class=""> -->
+  <div class="">
   <v-container class="">
     <v-row>
       <v-col cols="3">
@@ -61,7 +61,7 @@
       </v-col>
     </v-row>
   </v-container>
-  <!-- </div> -->
+  </div>
 </template>
 <script>
 import Jobdetail from "@/components/JobDetail.vue";
