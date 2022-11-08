@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { createStore }from "vuex";
+import  Vuex from "vuex";
 import axios from "axios";
 import { mapState } from "vuex";
 import loader from "./modules/loader";
@@ -25,7 +25,7 @@ httpClient.defaults.baseURL= "https://jobmarketbackend.up.railway.app/";
 const API_URL = "https://jobmarketbackend.up.railway.app/";
 axios.defaults.baseURL = "https://jobmarketbackend.up.railway.app/";
 
-export const store = createStore({
+export const store = new Vuex.Store({
   plugins: [
     createPersistedState(),
   ],
