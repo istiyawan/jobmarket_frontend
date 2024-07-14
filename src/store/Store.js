@@ -21,10 +21,13 @@ Vue.use(Vuex);
 // const API_URL = "http://jobmarketbackend.herokuapp.com";
 // axios.defaults.baseURL = "https://jobmarketbackend.herokuapp.com";
 
-httpClient.defaults.baseURL= "https://jobmarketbackend.up.railway.app/";
-const API_URL = "https://jobmarketbackend.up.railway.app/";
-axios.defaults.baseURL = "https://jobmarketbackend.up.railway.app/";
+// httpClient.defaults.baseURL= "https://jobmarketbackend.up.railway.app/";
+// const API_URL = "https://jobmarketbackend.up.railway.app/";
+// axios.defaults.baseURL = "https://jobmarketbackend.up.railway.app/";
 
+httpClient.defaults.baseURL= "https://present-inessa-istiyawan-73cfbbdc.koyeb.app";
+const API_URL = "https://present-inessa-istiyawan-73cfbbdc.koyeb.app";
+axios.defaults.baseURL = "https://present-inessa-istiyawan-73cfbbdc.koyeb.app";
 export const store = new Vuex.Store({
   plugins: [
     createPersistedState(),
